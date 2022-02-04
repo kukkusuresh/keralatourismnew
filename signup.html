@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SignUp</title>
+    
+  <link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style1.css">
+    
+</head>
+<body background-image= "images/tourwallimg.jpg">
+    <div class="topnav">
+        KERALA TOURISM
+        
+        <div class="topnav-right">
+            
+            <a class="active" href="index.html">Home</a>
+        <a href="signup.html">SignUp</a>
+        <a href="login.html">Login</a>
+          <a href="home.html">Explore</a>
+          <a href="#about">Aboutus</a>
+        </div>
+      </div>
+     
+    <!--<a href="index.html"><button onclick="document.location='index.html'">Home</button>
+    </a>-->
+    
+    
+    <div class="container">
+        
+        <div class="login">
+          <form onsubmit="return validate(e);" onmouseover="colorchange();" onmouseleave="colorback();" id="myform">
+         
+          <h2> Register Now</h2>
+         <br>
+         <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>                                                              
+         -->
+         <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>                                                               -->
+  
+           <label><b>Name</b></label>
+             <br>
+             <input id="name" type="text" placeholder="Enter your Name" >
+             
+             <br>
+             <br>
+             <label><b>Email</b></label>
+             <br>
+            <input id="email" type="email" placeholder="Enter your email">
+            <span id="eerror"></span>
+            <br>
+            <br>
+            <label><b>Phone Number</b></label>
+            <br>
+            <input id="mobile" type="text" placeholder="Enter your Phone Number">
+            <span id="merror"></span>
+            <br>
+            <br>
+            <label><b>Password</b></label>
+            <br>
+            <input id="psw" type="password" placeholder="Set a password">
+          
+            <span id="strength"></span>
+      <br>
+      <span id="perror"></span>
+      <br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+      <div class="clearfix">
+                <button id="submit" type="submit">SignUp</button>
+                <br>
+              </div>
+               <h4>Already a member?<a href="login.html">Login here</a>
+               </h4>
+              </div>
+            </form>
+       
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  
+     <script src="./form.js"></script> 
+    <!-- <script src="./logform.js"></script> -->
+   </body>
+</html>

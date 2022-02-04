@@ -1,0 +1,52 @@
+*
+{
+ padding: 0;
+ margin: 0;
+
+}
+body{
+    
+    object-fit: none;
+}
+.header #container
+{
+    height: 100%;
+    width: 100%;
+    background-image: image(url(images/tour6.jpg));
+    
+    background-attachment: fixed ;
+    background-size: cover ;
+    background-repeat: no-repeat ;
+}
+.header #loginbtn{
+    padding-top: 30px;
+    float:left;
+    color: yellowgreen;
+
+}
+
+.welcome
+{
+text-align: center;
+text-shadow: springgreen;
+
+}
+.h3
+{
+    color: rgb(6, 75, 11);
+}
+
+button{
+    
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+
+ 

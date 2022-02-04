@@ -1,0 +1,30 @@
+*
+{
+ padding: 0;
+ margin: 0;
+
+}
+body{
+    background-size: cover;
+}
+.parent
+{
+    float: right;
+    /*border: 4px solid crimson;*/
+    text-decoration-color: darkgreen;
+    height: 50em;
+    padding: 20px;
+    text-justify: auto;
+    color: rgba(209, 17, 17, 0.815);
+    }
+/*h3
+{
+color: darkorange;
+
+
+}
+
+
+
+
+ 
