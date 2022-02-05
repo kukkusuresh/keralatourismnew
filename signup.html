@@ -33,7 +33,7 @@
     <div class="container">
         
         <div class="login">
-          <form onsubmit="return validate(e);" onmouseover="colorchange();" onmouseleave="colorback();" id="myform">
+          <form onmouseover="colorchange();" onmouseleave="colorback();" id="myform">
          
           <h2> Register Now</h2>
          <br>
@@ -71,14 +71,14 @@
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
       </label>
       <div class="clearfix">
-                <button id="submit" type="submit">SignUp</button>
+                <button id="submit" onclick="validate()" type="button">SignUp</button>
                 <br>
               </div>
                <h4>Already a member?<a href="login.html">Login here</a>
                </h4>
               </div>
             </form>
-       
+       <!-- <button onclick="handleClick()">Clcik me test</button> -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

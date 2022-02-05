@@ -1,28 +1,32 @@
-function validate(e){
-e.preventDefault();
-    console.log("first");
-    document.getElementById("eerror").textContent="";
-    document.getElementById("perror").textContent="";
-    document.getElementById("merror").textContent="";
-    document.getElementById("strength").textContent="";
-    var x=verifyemail();
+  
+function validate() {
+   
+    document.getElementById("eerror").textContent = "";
+    document.getElementById("perror").textContent = "";
+    document.getElementById("merror").textContent = "";
+    document.getElementById("strength").textContent = "";
+    var x = verifyemail();
 
-    var y=verifymob();
-    var z=verifypass();
-    return y && z && x;
+    var y = verifymob();
+    var z = verifypass();
+    if(y && z && x){
+
+        window.location.href='./login.html'
+    }
+    // return false
 }
 function verifyemail() {
     console.log("verify email");
     var e = document.getElementById("email");
-    var validRegex =/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,8})(.[a-z]{2,8})?$/
-    if (validRegex.test(e.value)){
+    var validRegex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,8})(.[a-z]{2,8})?$/
+    if (validRegex.test(e.value)) {
         return true;
-    }  
+    }
     else {
-        document.getElementById("eerror").textContent="Invalid";
-        document.getElementById("eerror").style.color="red";
-        e.style.border="1px solid red";
-        e.value="";
+        document.getElementById("eerror").textContent = "Invalid";
+        document.getElementById("eerror").style.color = "red";
+        e.style.border = "1px solid red";
+        e.value = "";
         return false;
     }
 }
@@ -35,12 +39,12 @@ function verifymob() {
         return true;
     }
     else {
-      
-        document.getElementById("merror").textContent="Invalid mobile number";
-        document.getElementById("merror").style.color="red";
-        phone.style.border="1px solid red";
+
+        document.getElementById("merror").textContent = "Invalid mobile number";
+        document.getElementById("merror").style.color = "red";
+        phone.style.border = "1px solid red";
         phone.focus();
-        phone.value="";
+        phone.value = "";
         return false;
     }
 
@@ -49,44 +53,44 @@ function verifymob() {
 function verifypass() {
     console.log("verifi pass");
     var p = document.getElementById("psw");
-   // var cp = document.getElementById("cpwd");
-    var passw =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,10}$/;
+    // var cp = document.getElementById("cpwd");
+    var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 
-  if (cp.value != p.value) {
-        document.getElementById("cperror").textContent="Password and confirm passwords does not match";
-        document.getElementById("cperror").style.color="red";
-        p.style.border="1px solid red";
-        cp.style.border="1px solid red";
-        psw.value="";
-        cp.value="";
-        return false;
-    }
+    // if (cp.value != p.value) {
+    //     document.getElementById("cperror").textContent = "Password and confirm passwords does not match";
+    //     document.getElementById("cperror").style.color = "red";
+    //     p.style.border = "1px solid red";
+    //     cp.style.border = "1px solid red";
+    //     psw.value = "";
+    //     cp.value = "";
+    //     return false;
+    // }
 
     if (p.value.length < 8) {
-        document.getElementById("perror").textContent="password cannot be empty";
-        document.getElementById("perror").style.color="red";
-        p.style.border="1px solid red";
-        psw.value="";
+        document.getElementById("perror").textContent = "password cannot be empty";
+        document.getElementById("perror").style.color = "red";
+        p.style.border = "1px solid red";
+        psw.value = "";
         //cp.value="";
         return false;
     }
-    if (p.value.length > 10) {
-        document.getElementById("perror").textContent="Password is too long";
-        document.getElementById("perror").style.color="red";
-        p.style.border="1px solid red";
-        psw.value="";
-       // cp.value="";
+    if (p.value.length > 15) {
+        document.getElementById("perror").textContent = "Password is too long";
+        document.getElementById("perror").style.color = "red";
+        p.style.border = "1px solid red";
+        p.value = "";
+        // cp.value="";
         return false;
     }
-    if (psw.value.match(passw)) {
+    if (p.value.match(passw)) {
         return true;
     }
     else {
-       
-        document.getElementById("perror").textContent="password must contain not less than 10 characters which contain at least one letter lower and uppercase letter,number and special character";
-        document.getElementById("perror").style.color="red";
-        p.style.border="1px solid red";
-        psw.value="";
+
+        document.getElementById("perror").textContent = "password must contain !>15 characters which contain at least one letter lower and uppercase letter,number and special character";
+        document.getElementById("perror").style.color = "red";
+        p.style.border = "1px solid red";
+        p.value = "";
         //cp.value="";
         return false;
     }
@@ -123,6 +127,9 @@ function colorback() {
 
 
 
+function handleClick() {
+    alert("I am clicked!!")
+}
 
 
 
