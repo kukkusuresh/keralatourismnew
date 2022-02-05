@@ -87,7 +87,7 @@ function verifypass() {
     }
     else {
 
-        document.getElementById("perror").textContent = "password must contain !>15 characters which contain at least one letter lower and uppercase letter,number and special character";
+        document.getElementById("perror").textContent = "password must contain 8 t0 15 characters which contain at least one letter lower and uppercase letter,number and special character";
         document.getElementById("perror").style.color = "red";
         p.style.border = "1px solid red";
         p.value = "";
